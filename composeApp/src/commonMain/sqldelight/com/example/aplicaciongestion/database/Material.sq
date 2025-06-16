@@ -1,0 +1,17 @@
+CREATE TABLE Material (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    nombre TEXT NOT NULL,
+    descripcion TEXT NOT NULL,
+    cantidad INTEGER NOT NULL,
+    valor REAL NOT NULL
+);
+
+selectAll:
+SELECT * FROM Material;
+
+insertMaterial:
+INSERT INTO Material(nombre, descripcion, cantidad, valor)
+VALUES (?, ?, ?, ?);
+
+deleteById:
+DELETE FROM Material WHERE id = ?;
